@@ -1,4 +1,4 @@
-:: Made by xsSplater under MIT license.
+REM Made by xsSplater under MIT license.
 @echo off
 setlocal enableextensions enabledelayedexpansion
 1>nul chcp 65001
@@ -7,7 +7,7 @@ title "WARHAMMER 40,000 SPACE MARINE 2. DISABLE INTROS INSTALLER"
 mode con cols=100 lines=30
 
 :START
-:: LOOKING FOR THE GAME'S LOCATION ADDRESS AND WINRAR IN THE REGISTRY...
+REM LOOKING FOR THE GAME'S LOCATION ADDRESS AND WINRAR IN THE REGISTRY...
 for /f "tokens=2*" %%a in (
 	'reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 2183900" /v "InstallLocation"'
 ) do set "InstallLocationSM2=%%b"
@@ -15,12 +15,12 @@ for /f "tokens=2*" %%a in (
 	'reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WinRAR archiver" /v "InstallLocation"'
 ) do set "InstallLocationWinRAR=%%b"
 
-:: - ВЫ ЭКРАНЫ ПРОДАЁТЕ?
-:: - ПОКАЗЫВАЕМ‼
-:: - КРАСИВОЕ‼
+REM - ВЫ ЭКРАНЫ ПРОДАЁТЕ?
+REM - ПОКАЗЫВАЕМ‼
+REM - КРАСИВОЕ‼
 cls
 color 0A
-:: Green
+REM Green
 echo ████████████████████████████████████████████████████████████████████████████████████████████████████
 echo ████████████████████████████████████████▓▓▒▒░░░░░░▒▓▓▓▓▓▓▓▓▓████████████████████████████████████████
 echo ████████████████████████████████████▓▒░░░░░░░░░░░░▓█████████▓▓▓▒▓███████████████████████████████████
@@ -53,7 +53,7 @@ timeout /t 1 1>nul
 
 cls
 color 0A
-:: Green
+REM Green
 echo ████████████████████████████████████████████▓░░░░░░░░░░░▓███████████████████████████████████████████
 echo ███████████████████████████████████▓▒▒░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓██████████████████████████████████
 echo ██████████████████████████████▓▒░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒░██████████▓▓▓▓▓█████████████████████████████
@@ -86,7 +86,7 @@ timeout /t 1 1>nul
 
 cls
 color 0A
-:: Green
+REM Green
 echo █████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░████████████████████████
 echo ███████████████▓▓▒▒░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▓▓▓▓▓▓▓▓▓███████████████
 echo ██████████▓▒░░░░░░░░░░░░░░░▒▓▓▓+++ CONNECTING TO A SECURE CHANNEL +++▓▓▓▓▒░░█████████▓▓▓▒▓██████████
@@ -117,11 +117,11 @@ echo ██████████████▓▒▒░░░░░░░░
 echo ████████████████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██████████████████████
 timeout /t 1 1>nul
 
-:: IF THERE IS NO SUCH RECORD, THEN...
+REM IF THERE IS NO SUCH RECORD, THEN...
 if "%InstallLocationSM2%"=="" (
 cls
 color 0C
-:: Red
+REM Red
 echo ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███████
 echo █▓▒▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▓▓▓▓▓██
 echo ░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+++ SERVITOR X55-P1473-R ONLINE +++▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░█████▓▓
@@ -159,12 +159,12 @@ echo ████████░░░░░░░░░░░░░░░░░
 )
 goto FINDED_OR_NOT_FINDED
 
-:: SUGGEST ENTERING THE ADDRESS MANUALLY...
+REM SUGGEST ENTERING THE ADDRESS MANUALLY...
 :RIGHT_LOCATION_ZAPILI
 	:TY_MNE_VTIRAESH_DICH
 set /p "InstallLocationSM2=Enter or Paste the correct game address: "
 
-:: CHECKING THE CORRECTNESS OF THE MANUALLY ENTERED ADDRESS BY SEARCHING THE BINARIES FOLDER...
+REM CHECKING THE CORRECTNESS OF THE MANUALLY ENTERED ADDRESS BY SEARCHING THE BINARIES FOLDER...
 if not exist "%InstallLocationSM2%\Warhammer 40000 Space Marine 2.exe" (
 	echo OH‼ There was a mistake‼ Enter the correct address, without spaces or other characters at the end‼
 	goto TY_MNE_VTIRAESH_DICH
@@ -174,7 +174,7 @@ if not exist "%InstallLocationSM2%\Warhammer 40000 Space Marine 2.exe" (
 if not exist ssl (
 cls
 color 0C
-:: Red
+REM Red
 echo ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███████
 echo █▓▒▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▓▓▓▓▓██
 echo ░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+++ SERVITOR X55-P1473-R ONLINE +++▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░█████▓▓
@@ -210,7 +210,7 @@ echo ████████░░░░░░░░░░░░░░░░░
 if NOT exist "%InstallLocationSM2%\client_pc\root\paks\client\default\default_other.pak" (
 cls
 color 0C
-:: Red
+REM Red
 echo ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███████
 echo █▓▒▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▓▓▓▓▓██
 echo ░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+++ SERVITOR X55-P1473-R ONLINE +++▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░█████▓▓
@@ -243,13 +243,13 @@ echo ████████░░░░░░░░░░░░░░░░░
 		If Errorlevel 1 goto EOF
 )
 
-:: ABOUT BACKUP THIS QUESTION... ALAS, POOR YORIСK‼
+REM ABOUT BACKUP THIS QUESTION... ALAS, POOR YORIСK‼
 if exist "%InstallLocationSM2%\client_pc\root\paks\client\default\BACKUP\default_other.pak" goto INSTALL
 
 if NOT exist "%InstallLocationSM2%\client_pc\root\paks\client\default\BACKUP\default_other.pak" (
 cls
 color 0E
-:: Yellow
+REM Yellow
 echo ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███████
 echo █▓▒▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▓▓▓▓▓██
 echo ░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+++ SERVITOR X55-P1473-R ONLINE +++▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░█████▓▓
@@ -285,7 +285,7 @@ echo ████████░░░░░░░░░░░░░░░░░
 )
 
 :MADE_BACKUP_N_INSTALL
-:: CREATING BACKUP FOLDER...
+REM CREATING BACKUP FOLDER...
 If exist "%InstallLocationSM2%\client_pc\root\paks\client\default\BACKUP" goto BACKUP
 
 If NOT exist "%InstallLocationSM2%\client_pc\root\paks\client\default\BACKUP" (
@@ -293,15 +293,15 @@ If NOT exist "%InstallLocationSM2%\client_pc\root\paks\client\default\BACKUP" (
 )
 
 :BACKUP
-:: CREATING BACKUP COPY...
+REM CREATING BACKUP COPY...
 robocopy "%InstallLocationSM2%\client_pc\root\paks\client\default" "%InstallLocationSM2%\client_pc\root\paks\client\default\BACKUP" default_other.pak 1>nul
-:: BACKUP COPY HAS BEEN MADE. LET'S PROCEED TO INSTALLATION...
+REM BACKUP COPY HAS BEEN MADE. LET'S PROCEED TO INSTALLATION...
 
 :INSTALL
 if NOT exist "%InstallLocationWinRAR%" (
 cls
 color 0C
-:: Red
+REM Red
 echo ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███████
 echo █▓▒▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▓▓▓▓▓██
 echo ░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓+++ SERVITOR X55-P1473-R ONLINE +++▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░█████▓▓
@@ -337,12 +337,12 @@ echo ████████░░░░░░░░░░░░░░░░░
 )
 goto YES_WR_HERE
 
-:: SUGGEST ENTERING THE ADDRESS MANUALLY...
+REM SUGGEST ENTERING THE ADDRESS MANUALLY...
 :RIGHT_LOCATION_ZAPILI_WR
 	:TY_MNE_VTIRAESH_DICH_WR
 set /p "InstallLocationWinRAR=Enter or Paste the correct WinRAR address: "
 
-:: CHECKING THE CORRECTNESS OF THE MANUALLY ENTERED ADDRESS BY SEARCHING THE WINRAR.EXE...
+REM CHECKING THE CORRECTNESS OF THE MANUALLY ENTERED ADDRESS BY SEARCHING THE WINRAR.EXE...
 if not exist "%InstallLocationWinRAR%\WinRar.exe" (
 	echo OH‼ There was a mistake‼ Enter the correct address, without spaces or other characters at the end‼
 	goto TY_MNE_VTIRAESH_DICH_WR
@@ -355,7 +355,7 @@ if exist "%InstallLocationWinRAR%\WinRAR.exe" (
 
 cls
 color 0A
-:: Green
+REM Green
 echo ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒███████
 echo █▓▒▒▒░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░▓▓▓▓▓▓█
 echo ░░░░░░░░░░▒███████████████████████████████████████████████████████████████████████████████░░░██████▓
@@ -395,7 +395,7 @@ REM ----------------------------------------------------------------------------
 :EOF
 cls
 color 0A
-:: Green
+REM Green
 echo ░░░░▓██████▓▒░▒▓████████████████▒░░░░░░░░░░░░░░░░░▒█████████████████▓░░░░░░░░░░░░░░░▒█████▓▒▒░░▒████
 echo ░░░███████████████████████████▒░░░░░░░░░░░░░░░░░░░▒████████████████████▒░░░░░░░░░░░░░░▒▒░░░░░░░░░███
 echo ░▒█████████████████████████████▒▒▒░░░░░░░░░░░░░░░░▓██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░▓█
