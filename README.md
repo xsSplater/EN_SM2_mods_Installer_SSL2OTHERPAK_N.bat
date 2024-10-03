@@ -1,6 +1,6 @@
 # Warhammer 40,000: Space Marine 2
 
-# Mods Installer for the Disable Intros
+# Mods Installer
 ## version: 0.6
 
 ![Example](https://staticdelivery.nexusmods.com/mods/6771/images/headers/43_1726655413.jpg)
