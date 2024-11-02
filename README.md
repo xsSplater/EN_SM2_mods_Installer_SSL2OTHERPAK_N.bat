@@ -26,7 +26,7 @@ Download mod from: [Nexus](https://www.nexusmods.com/warhammer40000spacemarine2/
 
 ## Steam Version:
 
-1. Unzip the archive wherever you want next to the SSL folder.
+1. Unzip the bat-file wherever you want next to the SSL folder.
 2. Run the file "EN_Disable_Intros_Installer_N.bat".
 3. Follow the instructions of the X55-P1473-R Servitor.
 
