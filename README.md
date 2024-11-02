@@ -26,20 +26,13 @@ Download mod from: [Nexus](https://www.nexusmods.com/warhammer40000spacemarine2/
 
 ## Steam Version:
 
-1. Unzip the archive wherever you want.
+1. Unzip the archive wherever you want next to the SSL folder.
 2. Run the file "EN_Disable_Intros_Installer_N.bat".
 3. Follow the instructions of the X55-P1473-R Servitor.
 
 ## NON-Steam:
 
 For the non-Steam version, you will need to enter the game address manually in the Installer window, since the script can only find the Steam version itself. (I only have one version of the game ;)
-
-## Manual installation:
-
-1. Go to: "..\SteamLibrary\steamapps\common\Space Marine 2\client_pc\root\paks\client\default\"
-2. Open with WinRar (NOT 7zip): "default_other.pak"
-3. Copy folder "SSL" to it.
-4. Choose "Store" method!
 
 ---
 
