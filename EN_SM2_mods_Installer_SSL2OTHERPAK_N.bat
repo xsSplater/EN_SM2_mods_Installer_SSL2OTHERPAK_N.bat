@@ -1,4 +1,4 @@
-REM Made by xsSplater under MIT license.
+REM Made by xsSplater under GPL 3.0 license.
 @echo off
 setlocal enableextensions enabledelayedexpansion
 1>nul chcp 65001
