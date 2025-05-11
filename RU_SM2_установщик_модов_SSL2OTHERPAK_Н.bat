@@ -1,4 +1,4 @@
-REM Создано xsSplater по лицензии MIT.
+REM Создано xsSplater под GPL 3.0 лицензией.
 @echo off
 setlocal enableextensions enabledelayedexpansion
 1>nul chcp 65001
