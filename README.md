@@ -35,7 +35,3 @@ Download mod from: [Nexus](https://www.nexusmods.com/warhammer40000spacemarine2/
 For the non-Steam version, you will need to enter the game address manually in the Installer window, since the script can only find the Steam version itself. (I only have one version of the game ;)
 
 ---
-
-# License
-
-Code is under an MIT [license](LICENSE)
